@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+{% load staticfiles %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+<meta charset="utf-8">
+<title>Neomu Uh ryeb..</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<style type="text/css">
+	@font-face { font-family: 'GyeonggiBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+    
+    
+    body{
+        margin: 0;
+        width: 100%;
+        background-color:rgb(254,236,251);
+        text-align: center;
+        font-family:'GyeonggiBatang';
+    }
+    header{
+        margin: 0;
+        width: 100%;
+        background-color:rgb(255,255,255);
+        text-align: center;
+        font-family:'GyeonggiBatang';
+        padding: 60px;
+    }
+    
+.flex-con {
+        display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: flex-start;
+}
+
+.but{
+    display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: flex-start;
+		
+		
+}
+
+.but > button{
+    margin: 30px;
+    padding-bottom : 100px;
+}
+.flex-container{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+	
+		}
+		
+.profile{
+    
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+	
+		} 
+.profile > div {	
+        margin: 30px;
+		width: 500px;
+		justify-content: center;
+		align-items: flex-start;
+    
+    
+}
+.contact{
+    display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+}
+.contact > div{
+    
+		width: 500px;
+		justify-content: center;
+		align-items: flex-start;
+    
+    
+}
+
+
+
+.flex-container > div {
+    	margin: 30px;
+		width: 400px;
+		justify-content: center;
+		align-items: flex-start;
+		background-color: white;
+		font-size: 17px;
+		padding : 30px;
+}
+/*.flex-container > div.title {
+    	margin: 30px;
+		width: 700;
+		height: 200px;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		font-size: 100px;
+		padding : 30px;
+}*/
+.intro {
+   
+    
+}
+.image{
+    width: 300px;
+    height: 400px;
+    padding: 30px;
+
+}
+.prof{
+   
+  border-radius: 100%;
+  padding: 50px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    
+.small{
+    font-size: 5px;
+}
+.title{
+    
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin: 100px;
+		width: 450;
+		height: 100px;
+		justify-content: center;
+		align-items: center;
+		background-color: white;
+		font-size: 60px;
+		padding : 10px;
+		border-radius: 20px;
+		
+}
+.button {
+  /* Green */
+  border: none;
+  
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 18px;
+  width:200px;
+}
+.button1 {
+     background-color: yellow;
+     margin: 50px;
+     color: brown;
+}
+.button2 {
+     background-color: pink;
+     color: white;
+}
+.cont {
+  position: relative;
+  width: 50%;
+}
+
+.imag {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: pink;
+}
+
+.cont:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+</style>
+	<header id = "page-top">
+	  <h2>이렇게 하는거 맞을까</h2>
+	  <h1>안녕하세요 이유진입니다</h1> 
+	</header>
+</head>
+
+
+
+<body>
+
+	
+<div class="flex-con">	
+
+ <img src="{% static "images/현재.jpg" %}"/ class="prof">
+        <h1 class="title"> -  A B O U T  -</h1>
+<div class="profile">
+   
+    <div>
+         <h3>경영학 전공! 융소 복전!</h3>
+         <h3>3학년 2학기! 추가학기 불가!</h3>
+         <h3>좋아하는 것 : 집에서 눕눕</h3>
+         <h3>싫어하는 것 : 학교 가는 것</h3>
+         <h3>Bootstrap 넘 어려움! 포기!</h3>
+         <p class="small">24살 </p>
+        
+    </div> 
+    <div>
+        <h3>열심히 살고 싶은데 잘안되네용</h3>
+           <h3>요즘에는 누워있는거에 관심이 많습니다.</h3>
+           <h3>가장 좋아하는 과자는 원흥관 3층 매점의</h3>
+           <h3>꼬꼬스낵입니다. 먹어보세요 단돈 오백원!</h3>
+           <h3>최선입니다. 열심히 했으니까 참아주세용</h3>
+        
+    </div>
+</div>
+
+
+
+  
+       <h1 class="title"> -  H I S T O R Y  -</h1>
+      
+  
+ <div class="flex-container"> 
+  <div>
+     <img src="{% static 'images/애기.jpg' %}"/ class="image">
+     <p class="intro">
+         24살 인생에서 가장 이뻤을 때</p>
+        <p> 먼 친척 오랜만에 만나면 가장많이 듣는 말 :</p>
+        <p>유진이 어렸을 때 참 이뻤는데,,,</p> 
+  </div>
+ 
+  <div> 
+     <img src="{% static 'images/애기_코.jpg' %}"/ class="image">
+                <p class="intro">
+                    어렸을 때 귀여웠던 유진이 코냠냠
+                </p>
+                <p class="intro">
+                    코먹으면 면연력 증진된대요!
+                </p>
+  </div>
+   <div> 
+     <img src="{% static 'images/중딩.jpg' %}"/ class="image">
+                <p class="intro">
+                    중학생때 별명 짱뚱이 였어여</p> 
+                   <p class="intro">
+                        도서관에 짱뚱이라는 만화책이 있었는데</p>
+                   <p class="intro">
+                        닮았대용,, 선생님들도 짱뚱이라고 불렀습니다.
+                    
+                </p>
+  </div>
+  
+ </div>
+ 
+ <h1 class="title"> -  C O N T A C T  -</h1>
+ 
+    <div class="contact">
+      <div>
+        <div class="cont">
+                <img src="{% static 'images/짱뚱.jpg' %}"/ class="imag">                                
+                <div class="overlay">
+                    <a href="https://www.google.com/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EC%A4%91%EA%B5%AC+%EC%8C%8D%EB%A6%BC%EB%8F%99+186-6/@37.5632919,127.0036999,18z/data=!3m1!4b1!4m5!3m4!1s0x357ca3190402f981:0xd83d27ea4160381e!8m2!3d37.5632898!4d127.0047942?hl=ko"><div class="text">유진이 자취방 놀러오세용</div></a>                             
+                </div>
+        </div>
+      </div>
+    
+    
+
+    
+    
+    
+    <div>
+        <div class="but">
+            
+        <a href="http://qr.kakao.com/talk/3yRpgRC9Cpdi6WG9IemuiEYX.o4-"><button class="button button1">KAKAOTALK</button></a>
+        <a href="https://www.instagram.com/2u_zin/"><button class="button button2">INSTAGRAM</button></a>
+        
+        
+        </div>
+    </div>
+</div>
+ 
+</div>
+
+
+</body>
+
+
+
+
+</html>
